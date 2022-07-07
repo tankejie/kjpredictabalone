@@ -1,18 +1,18 @@
 <html >
 <head>  
-  <title>AutoAI Flask Deployment Tutorial</title>
+  <title>Predict Abalone Age</title>
 </head>
 
 <body>
  <div class="login">
-	<h1>Loan Risk Prediction</h1>
+	<h1>Abalone Age</h1>
 
      <!-- Main Input For Receiving Query to our ML -->
     <form action="{{ url_for('predict')}}"method="post">
-    	<input type="text" name="duration" placeholder="Enter Duration" required="required" /> </br> </br>
-        <input type="text" name="amount" placeholder="Enter Amount" required="required" /> </br> </br>
-	<input type="text" name="age" placeholder="Enter Age" required="required" /> </br> </br>
-        <button type="submit"> Predict Risk </button>
+    	<input type="text" name="length" placeholder="Enter Length" required="required" /> </br> </br>
+        <input type="text" name="diameter" placeholder="Enter Diameter" required="required" /> </br> </br>
+	<input type="text" name="height" placeholder="Enter Height" required="required" /> </br> </br>
+        <button type="submit"> Predict Abalone Age </button>
     </form>
 
    <br>
