@@ -60,7 +60,7 @@ def predict():
     print(response_scoring.json())
     ####################### END OF AUTOAI DEPLOYMENT API #######################
 
-    return render_template('index.html', prediction_text='Loan Risk Prediction is $ {}'.format(response_scoring.json()))
+    return render_template('index.html', prediction_text='Predict Abalone Age is $ {}'.format(response_scoring.json()))
 
 @app.route('/results',methods=['POST'])
 def results():
