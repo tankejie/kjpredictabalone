@@ -39,15 +39,13 @@ def predict():
                     "Whole weight",
                     "Shucked weight",
                     "Viscera weight",
-                    "Shell weight",
-                    "Rings"],                 
+                    "Shell weight"],                 
         "values": [[
 
                     None,
                     Length,
                     Diameter,
                     Height,
-                    None,
                     None,
                     None,
                     None,
