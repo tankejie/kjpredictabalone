@@ -52,10 +52,10 @@ def predict():
                     None]]
         }]}
 
-    response_scoring = requests.post('https://us-south.ml.cloud.ibm.com/ml/v4/deployments/e2ff9caa-7878-4d63-bb2c-79e1ac18b39e/predictions?version=2022-07-07', json=payload_scoring,
- headers={'Authorization': 'Bearer ' + mltoken})
-print("Scoring response")
-print(response_scoring.json())
+    response_response_scoring = requests.post('https://us-south.ml.cloud.ibm.com/ml/v4/deployments/e2ff9caa-7878-4d63-bb2c-79e1ac18b39e/predictions?version=2022-07-07', json=payload_scoring,
+        headers={'Authorization': 'Bearer ' + mltoken})
+    print("Scoring response")
+    print(response_scoring.json())
     ####################### END OF AUTOAI DEPLOYMENT API #######################
 
     return render_template('index.html', prediction_text='Predict Abalone Age is $ {}'.format(response_scoring.json()))
