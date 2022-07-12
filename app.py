@@ -19,7 +19,7 @@ def predict():
    
     ####################### FROM AUTOAI DEPLOYMENT API #######################
     # NOTE: you must manually set API_KEY below using information retrieved from your IBM Cloud account.
-    API_KEY = "ieLUV0Cb-QOgcFR_1tkB6KX6M9NU_Y-zAiP8yyVJRU2Q"
+    API_KEY = "PNKzxXEP5lm9a3oZkLnsBeb7VoKFyQ6pI4vRmiYwyf-3"
     token_response = requests.post('https://iam.cloud.ibm.com/identity/token', data={"apikey":
      API_KEY, "grant_type": 'urn:ibm:params:oauth:grant-type:apikey'})
     mltoken = token_response.json()["access_token"]
@@ -52,10 +52,10 @@ def predict():
                     None]]
         }]}
 
-    response_scoring = requests.post('https://us-south.ml.cloud.ibm.com/ml/v4/deployments/c258bae8-1c4e-4341-9462-9f2548c369e1/predictions?version=2022-07-07', json=payload_scoring,
-                                     headers={'Authorization': 'Bearer ' + mltoken})
-    print("Scoring response")
-    print(response_scoring.json())
+    response_scoring = requests.post('https://us-south.ml.cloud.ibm.com/ml/v4/deployments/e2ff9caa-7878-4d63-bb2c-79e1ac18b39e/predictions?version=2022-07-07', json=payload_scoring,
+ headers={'Authorization': 'Bearer ' + mltoken})
+print("Scoring response")
+print(response_scoring.json())
     ####################### END OF AUTOAI DEPLOYMENT API #######################
 
     return render_template('index.html', prediction_text='Predict Abalone Age is $ {}'.format(response_scoring.json()))
