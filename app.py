@@ -19,7 +19,7 @@ def predict():
    
     ####################### FROM AUTOAI DEPLOYMENT API #######################
     # NOTE: you must manually set API_KEY below using information retrieved from your IBM Cloud account.
-    API_KEY = "PNKzxXEP5lm9a3oZkLnsBeb7VoKFyQ6pI4vRmiYwyf-3"
+    API_KEY = "D5mV_oLOV2sk6ZW9IrhVUtcSSsoGVr0EiXbwk84lRmSv"
     token_response = requests.post('https://iam.cloud.ibm.com/identity/token', data={"apikey":
      API_KEY, "grant_type": 'urn:ibm:params:oauth:grant-type:apikey'})
     mltoken = token_response.json()["access_token"]
