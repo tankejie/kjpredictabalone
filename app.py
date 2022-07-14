@@ -8,14 +8,10 @@ model = pickle.load(open('model.h5','rb'))
 
 @app.route('/')
 def home():
-#     if request.method == 'POST':
-#         length = request.form.get('length')
-#         diameter = request.form.get('diameter')
-#         height = request.form.get('height')
-#         return redirect(url_for('predict', testdata=[[0,length,diameter,height,0,0,0,0]]))
     return render_template('index.html')
 
-@app.route('/predict', methods=['GET', 'POST'])
+
+@app.route('/predict',methods=['POST'])
 def predict():
     # Age = request.form.get('Rings')
     # if(Gender=='Female'):
@@ -34,18 +30,15 @@ def predict():
    
     ##Test model prediction with static data. Reshape to change to 2D array 
     testdata = np.reshape([
-    0,
+    None,
     length,
     diameter,
     height,
-    0,
-    0,
-    0,
-    0
+    None,
+    None,
+    None,
+    None
     ],(1, -1))
-    
-#     model = pickle.load(open('model.h5','rb'))
-#     pred_result = model.predict(testdata)
 
     pred_result = model.predict(testdata)
 
@@ -57,8 +50,7 @@ def predict():
     #     txt = 'Risky Loan'
     # print(txt)
     
-#     return render_template('index.html', prediction_text='The predicted abalone age is: {:.2f}'.format(pred_result))
-    return render_template('index.html', prediction_text='The predicted abalone age is {}'.format(pred_result.json()))
+    return render_template('index.html', prediction_text='The predicted abalone age is: {}'.format(pred_result))
 
 if __name__ == "__main__":
     app.run()
