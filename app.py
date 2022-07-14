@@ -11,7 +11,7 @@ def home():
     return render_template('login.html')
 
 
-@app.route('/predict',methods=['POST'])
+@app.route('/predict',methods=['GET', 'POST'])
 def predict():
     # Age = request.form.get('Rings')
     # if(Gender=='Female'):
