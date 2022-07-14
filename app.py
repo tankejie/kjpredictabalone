@@ -6,17 +6,17 @@ import requests
 app = Flask(__name__)
 model = pickle.load(open('model.h5','rb'))
 
-# @app.route('/')
-# def home():
+@app.route('/')
+def home():
 #     if request.method == 'POST':
 #         length = request.form.get('length')
 #         diameter = request.form.get('diameter')
 #         height = request.form.get('height')
 #         return redirect(url_for('predict', testdata=[[0,length,diameter,height,0,0,0,0]]))
-#     return render_template('index.html')
+    return render_template('index.html')
 
 
-@app.route('/', methods=['GET', 'POST'])
+@app.route('/predict', methods=['GET', 'POST'])
 def predict():
     # Age = request.form.get('Rings')
     # if(Gender=='Female'):
