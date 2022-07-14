@@ -53,7 +53,7 @@ def predict():
 
     pred_result = model.predict(testdata)
 
-    txt = "The predicted abalone age is {}.".format(pred_result)
+    txt = "The predicted abalone age is {}.".format(pred_result[0])
 
     # if(pred_result[0]==0):
     #     txt = 'No Risk Loan'
