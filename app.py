@@ -54,6 +54,8 @@ def predict():
     pred_result = model.predict(testdata)
 
     txt = "The predicted abalone age is {}.".format(pred_result[0])
+    
+    prediction_text = { "text":txt }
 
     # if(pred_result[0]==0):
     #     txt = 'No Risk Loan'
@@ -62,7 +64,7 @@ def predict():
     # print(txt)
     
 #     return render_template('index.html', prediction_text='The predicted abalone age is: {}'.format(pred_result))
-    return render_template('index.html', prediction_text=txt)
+    return render_template('index.html')
 
 if __name__ == "__main__":
     app.run()
