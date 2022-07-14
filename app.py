@@ -55,7 +55,7 @@ def predict():
 
     txt = "The predicted abalone age is {}.".format(pred_result[0])
     
-    predictions = { "text":txt }
+    predictions = {"txt":txt}
 
     # if(pred_result[0]==0):
     #     txt = 'No Risk Loan'
