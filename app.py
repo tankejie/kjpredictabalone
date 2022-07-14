@@ -29,18 +29,21 @@ def predict():
     # LoanDuration = request.form.get('duration')              
    
     ##Test model prediction with static data. Reshape to change to 2D array 
-    testdata = np.reshape([
-    0,
-    length,
-    diameter,
-    height,
-    0,
-    0,
-    0,
-    0
-    ],(1, -1))
+#     testdata = np.reshape([
+#     0,
+#     length,
+#     diameter,
+#     height,
+#     0,
+#     0,
+#     0,
+#     0
+#     ],(1, -1))
+    
+#     model = pickle.load(open('model.h5','rb'))
+    pred_result = model.predict([[0,0.3,0.3,0.3,0,0,0,0]])
 
-    pred_result = model.predict(testdata)
+#     pred_result = model.predict(testdata)
 
     # txt = "The predicted abalone age is {}.".format(pred_result)
 
