@@ -15,7 +15,7 @@ def home():
 #         return redirect(url_for('predict', testdata=[[0,length,diameter,height,0,0,0,0]]))
     return render_template('index.html')
 
-
+@app.route('/', methods=['GET', 'POST'])
 @app.route('/predict', methods=['GET', 'POST'])
 def predict():
     # Age = request.form.get('Rings')
