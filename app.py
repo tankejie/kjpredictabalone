@@ -57,7 +57,8 @@ def predict():
     #     txt = 'Risky Loan'
     # print(txt)
     
-    return render_template('index.html', prediction_text='The predicted abalone age is: {:.2f}'.format(pred_result))
+#     return render_template('index.html', prediction_text='The predicted abalone age is: {:.2f}'.format(pred_result))
+    return render_template('index.html', prediction_text='The predicted abalone age is {}'.format(pred_result.json()))
 
 if __name__ == "__main__":
     app.run()
