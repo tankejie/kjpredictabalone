@@ -29,15 +29,26 @@ def predict():
     # LoanDuration = request.form.get('duration')              
    
     ##Test model prediction with static data. Reshape to change to 2D array 
+#     testdata = np.reshape([
+#     None,
+#     length,
+#     diameter,
+#     height,
+#     None,
+#     None,
+#     None,
+#     None
+#     ],(1, -1))
+    
     testdata = np.reshape([
-    None,
+    0,
     length,
     diameter,
     height,
-    None,
-    None,
-    None,
-    None
+    0,
+    0,
+    0,
+    0
     ],(1, -1))
 
     pred_result = model.predict(testdata)
