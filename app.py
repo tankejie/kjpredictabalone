@@ -16,7 +16,7 @@ def home():
     return render_template('index.html')
 
 
-@app.route('/predict')
+@app.route('/predict/<testdata>')
 def predict(testdata):
     # Age = request.form.get('Rings')
     # if(Gender=='Female'):
