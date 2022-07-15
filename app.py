@@ -30,14 +30,14 @@ def predict():
    
     ##Test model prediction with static data. Reshape to change to 2D array 
     testdata = np.reshape([
-    0,
+    None,
     length,
     diameter,
     height,
-    0,
-    0,
-    0,
-    0
+    None,
+    None,
+    None,
+    None
     ],(1, -1))
 
     pred_result = model.predict(testdata)
