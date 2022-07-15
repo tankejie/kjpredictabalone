@@ -24,16 +24,16 @@ def predict():
     # else:
     #     MStatus=1
     length = float(request.form.get('length'))
-    diameter = request.form.get('diameter')
-    height = request.form.get('height')
+    diameter = float(request.form.get('diameter'))
+    height = float(request.form.get('height'))
     # LoanDuration = request.form.get('duration')              
    
     ##Test model prediction with static data. Reshape to change to 2D array 
     testdata = np.reshape([
     0,
-    float(length),
-    float(diameter),
-    float(height),
+    length,
+    diameter,
+    height,
     0,
     0,
     0,
