@@ -23,7 +23,7 @@ def predict():
     #     MStatus=0
     # else:
     #     MStatus=1
-    length = request.form.get('length')
+    length = float(request.form.get('length'))
     diameter = request.form.get('diameter')
     height = request.form.get('height')
     # LoanDuration = request.form.get('duration')              
@@ -31,9 +31,9 @@ def predict():
     ##Test model prediction with static data. Reshape to change to 2D array 
     testdata = np.reshape([
     0,
-    length,
-    diameter,
-    height,
+    float(length),
+    float(diameter),
+    float(height),
     0,
     0,
     0,
